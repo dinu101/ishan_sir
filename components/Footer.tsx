@@ -29,6 +29,7 @@ export default function Footer() {
       href: '#',
       icon: 'fa-whatsapp',
       hoverColor: 'hover:text-green-400',
+      disabled: true, // 👈 added
     },
   ]
 
@@ -53,10 +54,18 @@ export default function Footer() {
             {socialLinks.map((link, index) => (
               <a
                 key={index}
-                href={link.href}
-                target="_blank"
+                href={link.disabled ? undefined : link.href}
+                target={link.disabled ? undefined : '_blank'}
                 rel="noopener noreferrer"
-                className={`text-gray-400 ${link.hoverColor} transition duration-300 transform hover:scale-125`}
+                onClick={(e) => {
+                  if (link.disabled) {
+                    e.preventDefault()
+                    alert('WhatsApp contact option is currently disabled. Please use other social links.')
+                  }
+                }}
+                className={`text-gray-400 ${link.hoverColor} transition duration-300 transform hover:scale-125 ${
+                  link.disabled ? 'opacity-40 cursor-not-allowed pointer-events-auto' : ''
+                }`}
               >
                 <i className={`fab ${link.icon} text-3xl`}></i>
               </a>

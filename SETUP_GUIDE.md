@@ -285,4 +285,4 @@ If you encounter issues:
 - [ ] Custom domain configured (optional)
 - [ ] Analytics added (optional)
 
-Good luck with your portfolio! 🎉
+Good luck with your portfolio Ishan! 🎉

@@ -10,7 +10,6 @@ import { useState } from 'react'
 export default function Contact() {
   const [showSuccess, setShowSuccess] = useState(false)
 
-  // Contact information data
   const contactInfo = [
     {
       icon: 'fa-phone-alt',
@@ -35,7 +34,6 @@ export default function Contact() {
     },
   ]
 
-  // Social media links
   const socialLinks = [
     {
       href: 'https://www.linkedin.com/in/sohan-bbb64b233',
@@ -63,36 +61,8 @@ export default function Contact() {
     },
   ]
 
-  // Handle form submission
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-
-    const formData = new FormData(e.currentTarget)
-    const name = formData.get('name')
-    const email = formData.get('email')
-    const subject = formData.get('subject')
-    const message = formData.get('message')
-
-    // Create mailto link
-    const mailtoLink = `mailto:mm8239239249@gmail.com?subject=${encodeURIComponent(
-      subject as string
-    )}&body=${encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-    )}`
-
-    // Open email client
-    window.location.href = mailtoLink
-
-    // Show success message
-    setShowSuccess(true)
-
-    // Reset form
-    e.currentTarget.reset()
-
-    // Hide success message after 5 seconds
-    setTimeout(() => {
-      setShowSuccess(false)
-    }, 5000)
+  const handleDisabledClick = () => {
+    alert('Please contact through social media. This option is currently not working.')
   }
 
   return (
@@ -101,34 +71,26 @@ export default function Contact() {
       className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Title */}
-        <h2
-          className="text-3xl sm:text-4xl font-bold text-center mb-4"
-          data-aos="fade-up"
-        >
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
           Get In <span className="text-primary">Touch</span>
         </h2>
-        <p
-          className="text-center text-gray-600 mb-12"
-          data-aos="fade-up"
-        >
+        <p className="text-center text-gray-600 mb-12">
           Have a project in mind? Let&apos;s work together!
         </p>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
-          <div className="space-y-6" data-aos="fade-right">
+          {/* Contact Info */}
+          <div className="space-y-6">
             <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
 
-            {/* Contact Info Cards */}
             {contactInfo.map((info, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition"
               >
                 <div className="flex items-center">
                   <div
-                    className={`w-14 h-14 bg-gradient-to-br ${info.gradient} rounded-full flex items-center justify-center mr-4 animate-pulse-glow`}
+                    className={`w-14 h-14 bg-gradient-to-br ${info.gradient} rounded-full flex items-center justify-center mr-4`}
                   >
                     <i className={`fas ${info.icon} text-2xl text-white`}></i>
                   </div>
@@ -171,102 +133,24 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div
-            className="bg-white p-8 rounded-lg shadow-2xl"
-            data-aos="fade-left"
-          >
+          <div className="bg-white p-8 rounded-lg shadow-2xl">
             <h3 className="text-2xl font-bold mb-6">Send Me a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name Field */}
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-gray-700 mb-2"
-                >
-                  <i className="las la-user text-primary mr-2"></i>Your Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
-                  placeholder="John Doe"
-                />
-              </div>
 
-              {/* Email Field */}
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-2"
-                >
-                  <i className="las la-envelope text-primary mr-2"></i>Your
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
-                  placeholder="john@example.com"
-                />
-              </div>
+            <form className="space-y-6">
+              <input disabled className="w-full px-4 py-3 border rounded-lg" placeholder="Your Name" />
+              <input disabled className="w-full px-4 py-3 border rounded-lg" placeholder="Your Email" />
+              <input disabled className="w-full px-4 py-3 border rounded-lg" placeholder="Subject" />
+              <textarea disabled className="w-full px-4 py-3 border rounded-lg" placeholder="Message"></textarea>
 
-              {/* Subject Field */}
-              <div>
-                <label
-                  htmlFor="subject"
-                  className="block text-sm font-medium text-gray-700 mb-2"
-                >
-                  <i className="las la-tag text-primary mr-2"></i>Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition"
-                  placeholder="Project Discussion"
-                />
-              </div>
-
-              {/* Message Field */}
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 mb-2"
-                >
-                  <i className="las la-comment text-primary mr-2"></i>Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition resize-none"
-                  placeholder="Tell me about your project..."
-                ></textarea>
-              </div>
-
-              {/* Submit Button */}
               <button
-                type="submit"
-                className="w-full bg-primary text-white px-8 py-4 rounded-lg hover:bg-secondary transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center text-lg font-semibold"
+                type="button"
+                onClick={handleDisabledClick}
+                className="w-full bg-gray-400 text-white px-8 py-4 rounded-lg cursor-not-allowed shadow-lg flex items-center justify-center text-lg font-semibold"
               >
                 <i className="las la-paper-plane mr-2"></i>
                 Send Message
               </button>
             </form>
-
-            {/* Success Message */}
-            {showSuccess && (
-              <div className="mt-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-                <i className="las la-check-circle mr-2"></i>
-                Message sent successfully! I&apos;ll get back to you soon.
-              </div>
-            )}
           </div>
         </div>
       </div>

@@ -71,7 +71,7 @@ export default function Hero() {
           <div className="mb-8" data-aos="fade-down">
             <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-full overflow-hidden border-4 border-primary animate-pulse-glow animate-float">
               <Image
-                src="/ishan22.jpg (1).jpeg"
+                src="/hero1.jpeg"
                 alt="Ishan Thakur"
                 width={200}
                 height={200}
@@ -89,8 +89,8 @@ export default function Hero() {
             className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4"
             data-aos="fade-up"
           >
-            Hello, I&apos;m{' '}
-            <span className="text-transparent bg-clip-text animate-gradient">
+            Hello, I&apos;m {''}
+            <span className="text-primary animate-gradient-text bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
               Ishan Thakur
             </span>
           </h1>
@@ -114,8 +114,8 @@ export default function Hero() {
             data-aos-delay="200"
           >
             <i className="las la-star text-yellow-500"></i>
-            Passionate MERN Stack & React Native Developer with 2 years of
-            experience building scalable, user-friendly applications
+          ' Django | MERN | App Development — Turning Ideas Into Scalable, High-Impact Digital Products.'
+
           </p>
 
           {/* CTA Buttons */}

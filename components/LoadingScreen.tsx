@@ -67,9 +67,9 @@ export default function LoadingScreen() {
 
         {/* Loading Text */}
         <h2 className="text-2xl font-bold text-gray-900 mb-2 font-poppins">
-          Loading Portfolio
+          Loading ...
         </h2>
-        <p className="text-gray-600 mb-6">Please wait while we prepare everything...</p>
+        <p className="text-gray-600 mb-6">Welcome Please wait while we prepare everything...</p>
 
         {/* Progress Bar */}
         <div className="w-64 mx-auto bg-gray-200 rounded-full h-2 overflow-hidden">
