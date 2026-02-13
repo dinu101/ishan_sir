@@ -9,6 +9,7 @@ import Image from 'next/image'
 // ===========================================
 
 export default function Hero() {
+
   // Create animated particles in the background
   useEffect(() => {
     const particlesContainer = document.getElementById('particles')
@@ -25,6 +26,14 @@ export default function Hero() {
       particlesContainer.appendChild(particle)
     }
   }, [])
+
+  // ==============================
+  // WhatsApp Configuration
+  // ==============================
+  const phoneNumber = "918239239249" // Replace with your number (no +)
+  const whatsappMessage = encodeURIComponent(
+    "Hello Sohan, I visited your portfolio and would like to discuss a project with you."
+  )
 
   // Social media links
   const socialLinks = [
@@ -44,7 +53,7 @@ export default function Hero() {
       color: 'hover:text-pink-600',
     },
     {
-      href: '#',
+      href: `https://wa.me/${phoneNumber}?text=${whatsappMessage}`,
       icon: 'fa-whatsapp',
       color: 'hover:text-green-600',
     },
@@ -55,10 +64,11 @@ export default function Hero() {
       id="home"
       className="pt-16 min-h-screen flex items-center bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden"
     >
+
       {/* Animated particles */}
       <div className="particles" id="particles"></div>
 
-      {/* Random floating shapes */}
+      {/* Floating shapes */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-blue-400 rounded-full opacity-20 animate-float-random-1"></div>
       <div className="absolute top-40 right-20 w-32 h-32 bg-purple-400 rounded-full opacity-15 animate-float-random-2"></div>
       <div className="absolute bottom-40 left-1/4 w-24 h-24 bg-pink-400 rounded-full opacity-20 animate-float-random-3"></div>
@@ -67,40 +77,34 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="text-center">
+
           {/* Profile Image */}
-          <div className="mb-8" data-aos="fade-down">
+          <div className="mb-8">
             <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-full overflow-hidden border-4 border-primary animate-pulse-glow animate-float">
               <Image
                 src="/hero1.jpeg"
-                alt="Ishan Thakur"
+                alt="Sohan Bheel"
                 width={200}
                 height={200}
                 className="w-full h-full object-cover"
                 onError={(e) => {
                   e.currentTarget.src =
-                    'https://ui-avatars.com/api/?name=Ishan+Thakur&size=200&background=3b82f6&color=fff&bold=true'
+                    'https://ui-avatars.com/api/?name=Sohan+Bheel&size=200&background=3b82f6&color=fff&bold=true'
                 }}
               />
             </div>
           </div>
 
-          {/* Main Heading */}
-          <h1
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4"
-            data-aos="fade-up"
-          >
-            Hello, I&apos;m {''}
-            <span className="text-primary animate-gradient-text bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+          {/* Heading */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+            Hello, I'm{" "}
+            <span className="text-primary bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
               Sohan Bheel
             </span>
           </h1>
 
           {/* Subtitle */}
-          <div
-            className="flex items-center justify-center mb-6"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
+          <div className="flex items-center justify-center mb-6">
             <i className="las la-laptop-code text-3xl text-primary mr-3"></i>
             <p className="text-xl sm:text-2xl md:text-3xl text-gray-700 font-semibold">
               Full Stack Web Developer
@@ -108,22 +112,13 @@ export default function Hero() {
           </div>
 
           {/* Description */}
-          <p
-            className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <i className="las la-star text-yellow-500"></i>
-          ' Django | MERN | App Development — Turning Ideas Into Scalable, High-Impact Digital Products.'
-
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Django | MERN | App Development — Turning Ideas Into Scalable,
+            High-Impact Digital Products.
           </p>
 
           {/* CTA Buttons */}
-          <div
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#projects"
               className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-secondary transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center"
@@ -131,6 +126,7 @@ export default function Hero() {
               <i className="las la-briefcase mr-2"></i>
               View Portfolio
             </a>
+
             <a
               href="#contact"
               className="bg-white text-primary px-8 py-3 rounded-lg hover:bg-gray-100 transition duration-300 shadow-lg border-2 border-primary hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center"
@@ -141,11 +137,7 @@ export default function Hero() {
           </div>
 
           {/* Social Links */}
-          <div
-            className="flex justify-center space-x-6 mt-10"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
+          <div className="flex justify-center space-x-6 mt-10">
             {socialLinks.map((link, index) => (
               <a
                 key={index}
@@ -161,12 +153,13 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll down indicator */}
+      {/* Scroll Down Indicator */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
         <a href="#about" className="text-primary">
           <i className="las la-chevron-down text-3xl"></i>
         </a>
       </div>
+
     </section>
   )
 }

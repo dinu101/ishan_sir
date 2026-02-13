@@ -24,18 +24,18 @@ const poppins = Poppins({
 // ===========================================
 
 export const metadata: Metadata = {
-  title: 'Ishan Thakur - Full Stack Developer',
+  title: 'Sohan Bheel - Full Stack Developer',
   description: 'Portfolio of Ishan Thakur - Passionate MERN Stack & React Native Developer with 2 years of experience building scalable, user-friendly applications',
   keywords: ['Full Stack Developer', 'MERN Stack', 'React Native', 'Web Development', 'Portfolio'],
-  authors: [{ name: 'Ishan Thakur' }],
-  creator: 'Ishan Thakur',
+  authors: [{ name: 'Sohan Bheel' }],
+  creator: 'Sohan Bheel',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://yourwebsite.com',
-    title: 'Ishan Thakur - Full Stack Developer',
-    description: 'Portfolio of Ishan Thakur - MERN Stack & React Native Developer',
-    siteName: 'Ishan Thakur Portfolio',
+    url: 'https://sohanbheel.com',
+    title: 'Sohan Bheel - Full Stack Developer',
+    description: 'Portfolio of Sohan BHeel - MERN Stack & Django Developer',
+    siteName: 'Sohan Bheel Portfolio',
   },
 }
 

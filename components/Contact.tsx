@@ -10,6 +10,14 @@ import { useState } from 'react'
 export default function Contact() {
   const [showSuccess, setShowSuccess] = useState(false)
 
+  // ==============================
+  // WhatsApp Configuration
+  // ==============================
+  const phoneNumber = "918239239249" // No + sign
+  const whatsappMessage = encodeURIComponent(
+    "Hello Sohan, I visited your portfolio and would like to connect regarding a project."
+  )
+
   const contactInfo = [
     {
       icon: 'fa-phone-alt',
@@ -54,7 +62,7 @@ export default function Contact() {
       hoverColor: 'hover:opacity-90',
     },
     {
-      href: '#',
+      href: `https://wa.me/${phoneNumber}?text=${whatsappMessage}`,
       icon: 'fa-whatsapp',
       bgColor: 'bg-green-500',
       hoverColor: 'hover:bg-green-600',
@@ -62,7 +70,7 @@ export default function Contact() {
   ]
 
   const handleDisabledClick = () => {
-    alert('Please contact through social media. This option is currently not working.')
+    alert('Please contact through WhatsApp or social media. This form is currently disabled.')
   }
 
   return (
@@ -75,10 +83,11 @@ export default function Contact() {
           Get In <span className="text-primary">Touch</span>
         </h2>
         <p className="text-center text-gray-600 mb-12">
-          Have a project in mind? Let&apos;s work together!
+          Have a project in mind? Let’s work together!
         </p>
 
         <div className="grid lg:grid-cols-2 gap-12">
+
           {/* Contact Info */}
           <div className="space-y-6">
             <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
@@ -152,6 +161,7 @@ export default function Contact() {
               </button>
             </form>
           </div>
+
         </div>
       </div>
     </section>
