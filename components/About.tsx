@@ -36,7 +36,7 @@ export default function About() {
 
             {/* About Description */}
             <p className="text-gray-600 mb-4 leading-relaxed">
-             Hi, I'm Ishan Thakur — a Senior Software Engineer at <strong>HCLTech</strong> with 5+ years of hands-on experience in Django(Python) ,MERN Stack, React Native, and full-stack application development, delivering scalable and high-performance digital solutions.
+             Hi, I'm Sohan Bheel — a Senior Software Engineer at <strong>HCLTech</strong> with 5+ years of hands-on experience in Django(Python) ,MERN Stack, React Native, and full-stack application development, delivering scalable and high-performance digital solutions.
 
             </p>
             <p className="text-gray-600 mb-4 leading-relaxed">
@@ -87,7 +87,7 @@ export default function About() {
               <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-primary relative z-10">
                 <Image
                   src="/i2.jpg"
-                  alt="Ishan Thakur"
+                  alt="Sohan Bheel"
                   width={400}
                   height={400}
                   className="w-full h-full object-cover"
