@@ -14,6 +14,7 @@ import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
 import LoadingScreen from '@/components/LoadingScreen'
+import ReviewSection from '@/components/review'
 import { useEffect } from 'react'
 import AOS from 'aos'
 
@@ -46,6 +47,8 @@ export default function Home() {
       
       {/* Projects Section */}
       <Projects />
+      {/* Reviews Section */}
+      <ReviewSection />
       
       {/* Contact Section */}
       <Contact />
