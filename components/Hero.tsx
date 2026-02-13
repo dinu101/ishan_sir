@@ -91,7 +91,7 @@ export default function Hero() {
           >
             Hello, I&apos;m {''}
             <span className="text-primary animate-gradient-text bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-              Ishan Thakur
+              Sohan Bheel
             </span>
           </h1>
 

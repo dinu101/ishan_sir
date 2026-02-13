@@ -43,7 +43,7 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <h1 className="text-2xl font-bold text-primary flex items-center">
               <i className="las la-code mr-2"></i>
-              Ishan Thakur
+              Sohan Bheel
             </h1>
           </div>
 

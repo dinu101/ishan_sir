@@ -70,7 +70,7 @@ export default function About() {
 
             {/* Download Resume Button */}
             <a
-              href="/Ishan_CV.pdf"
+              href="/sohancv.pdf"
               className="inline-flex items-center bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition duration-300 transform hover:scale-105 shadow-lg"
             >
               <i className="las la-download mr-2"></i>
@@ -86,7 +86,7 @@ export default function About() {
             <div className="relative">
               <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-primary relative z-10">
                 <Image
-                  src="/hero1.jpeg"
+                  src="/i2.jpg"
                   alt="Ishan Thakur"
                   width={400}
                   height={400}

@@ -8,88 +8,104 @@
 export default function Skills() {
   // Main skill categories with detailed information
   const skillCategories = [
-{
-  title: 'Django Stack',
-  description:
-    'Django, Django REST Framework, PostgreSQL, and React for building secure, scalable, and API-driven web applications.',
-  gradient: 'from-emerald-400 to-teal-500',
-  icon: 'devicon-django-plain',
-  technologies: [
-    { icon: 'devicon-django-plain', name: 'Django', color: 'text-green-700' },
-    { icon: 'devicon-python-plain', name: 'Python', color: 'text-yellow-600' },
-    { icon: 'devicon-react-original', name: 'React', color: 'text-cyan-500' },
-    { icon: 'devicon-postgresql-plain', name: 'PostgreSQL', color: 'text-blue-600' },
-    { icon: 'devicon-redis-plain', name: 'Redis', color: 'text-red-500' },
-  ],
-  delay: 0,
-}
-,
     {
-  title: 'MERN Stack',
-  description:
-    'MongoDB, Express.js, React.js, Node.js for building fast, scalable, and dynamic web applications with modern UIs.',
-  gradient: 'from-green-400 to-cyan-500',
-  icon: 'devicon-react-original',
-  technologies: [
-    { icon: 'devicon-react-original', name: 'React', color: 'text-cyan-500' },
-    { icon: 'devicon-nodejs-plain', name: 'Node.js', color: 'text-green-600' },
-    { icon: 'devicon-mongodb-plain', name: 'MongoDB', color: 'text-green-700' },
-    { icon: 'devicon-express-original', name: 'Express.js', color: 'text-gray-700' },
-  ],
-  delay: 100,
-}
-,
- {
-  title: 'App Development',
-  description:
-    'We build fast, secure, and scalable applications with intuitive UI/UX for startups and businesses.',
-  gradient: 'from-cyan-400 to-blue-500',
-  icon: 'devicon-android-plain', // ✅ Devicon icon
-  technologies: [
-    { icon: 'devicon-react-original', name: 'React / React Native', color: 'text-cyan-500' },
-    { icon: 'devicon-android-plain', name: 'Android', color: 'text-green-600' },
-    { icon: 'devicon-kotlin-plain', name: 'Kotlin', color: 'text-purple-600' },
-    { icon: 'devicon-nodejs-plain', name: 'Node.js', color: 'text-green-600' },
-    { icon: 'devicon-firebase-plain', name: 'Firebase', color: 'text-yellow-500' },
-  ],
-  delay: 100,
-}
+      title: 'Django Stack',
+      description:
+        'Django, Django REST Framework, PostgreSQL, and React for building secure, scalable, and API-driven web applications.',
+      gradient: 'from-emerald-400 to-teal-500',
+      icon: 'devicon-django-plain',
+      technologies: [
+        { icon: 'devicon-django-plain', name: 'Django', color: 'text-green-700' },
+        { icon: 'devicon-python-plain', name: 'Python', color: 'text-yellow-600' },
+        { icon: 'devicon-react-original', name: 'React', color: 'text-cyan-500' },
+        { icon: 'devicon-postgresql-plain', name: 'PostgreSQL', color: 'text-blue-600' },
+        { icon: 'devicon-redis-plain', name: 'Redis', color: 'text-red-500' },
+      ],
+      delay: 0,
+    }
+    ,
+    {
+      title: 'MERN Stack',
+      description:
+        'MongoDB, Express.js, React.js, Node.js for building fast, scalable, and dynamic web applications with modern UIs.',
+      gradient: 'from-green-400 to-cyan-500',
+      icon: 'devicon-react-original',
+      technologies: [
+        { icon: 'devicon-react-original', name: 'React', color: 'text-cyan-500' },
+        { icon: 'devicon-nodejs-plain', name: 'Node.js', color: 'text-green-600' },
+        { icon: 'devicon-mongodb-plain', name: 'MongoDB', color: 'text-green-700' },
+        { icon: 'devicon-express-original', name: 'Express.js', color: 'text-gray-700' },
+      ],
+      delay: 100,
+    }
+    ,
+    {
+      title: 'App Development',
+      description:
+        'We build fast, secure, and scalable applications with intuitive UI/UX for startups and businesses.',
+      gradient: 'from-cyan-400 to-blue-500',
+      icon: 'devicon-android-plain', // ✅ Devicon icon
+      technologies: [
+        { icon: 'devicon-react-original', name: 'React / React Native', color: 'text-cyan-500' },
+        { icon: 'devicon-android-plain', name: 'Android', color: 'text-green-600' },
+        { icon: 'devicon-kotlin-plain', name: 'Kotlin', color: 'text-purple-600' },
+        { icon: 'devicon-nodejs-plain', name: 'Node.js', color: 'text-green-600' },
+        { icon: 'devicon-firebase-plain', name: 'Firebase', color: 'text-yellow-500' },
+      ],
+      delay: 100,
+    }
 
-,
-{
-  title: 'AI / ML & Chatbot Integration',
-  description:
-    'Intelligent AI chatbots and ML integrations using NLP, APIs, and automation to improve support, sales, and engagement.',
-  gradient: 'from-fuchsia-400 to-violet-500',
-  icon: 'devicon-python-plain',
-  technologies: [
-    { icon: 'devicon-python-plain', name: 'Python', color: 'text-blue-500' },
-    { icon: 'devicon-tensorflow-original', name: 'TensorFlow', color: 'text-orange-500' },
-    { icon: 'devicon-pytorch-original', name: 'PyTorch', color: 'text-red-500' },
-    { icon: 'devicon-openai-plain', name: 'OpenAI / LLMs', color: 'text-gray-700' },
-  ],
-  delay: 300,
-}
+    ,
+    {
+      title: 'AI / ML & Chatbot Integration',
+      description:
+        'Intelligent AI chatbots and ML integrations using NLP, APIs, and automation to improve support, sales, and engagement.',
+      gradient: 'from-fuchsia-400 to-violet-500',
+      icon: 'devicon-python-plain',
+      technologies: [
+        { icon: 'devicon-python-plain', name: 'Python', color: 'text-blue-500' },
+        { icon: 'devicon-tensorflow-original', name: 'TensorFlow', color: 'text-orange-500' },
+        { icon: 'devicon-pytorch-original', name: 'PyTorch', color: 'text-red-500' },
+        { icon: 'devicon-openai-plain', name: 'OpenAI / LLMs', color: 'text-gray-700' },
+      ],
+      delay: 300,
+    }
 
   ]
 
   // Technology stack icons
  const techStack = [
+  // 🔹 Core Web Fundamentals
   { icon: 'devicon-html5-plain', name: 'HTML5', color: 'text-orange-600' },
   { icon: 'devicon-css3-plain', name: 'CSS3', color: 'text-blue-600' },
   { icon: 'devicon-javascript-plain', name: 'JavaScript', color: 'text-yellow-500' },
+  { icon: 'devicon-typescript-plain', name: 'TypeScript', color: 'text-red-600' },
+
+  // 🔹 Frontend Frameworks & UI
   { icon: 'devicon-react-original', name: 'React.js', color: 'text-cyan-500' },
+  { icon: 'devicon-nextjs-plain', name: 'Next.js', color: 'text-black dark:text-white' },
+  { icon: 'devicon-angularjs-plain', name: 'Angular', color: 'text-red-500' },
+  { icon: 'devicon-bootstrap-plain', name: 'Bootstrap', color: 'text-purple-600' },
+  { icon: 'devicon-tailwindcss-plain', name: 'Tailwind', color: 'text-sky-500' },
+
+  // 🔹 Backend & Runtime
   { icon: 'devicon-nodejs-plain', name: 'Node.js', color: 'text-green-600' },
+  { icon: 'devicon-python-plain', name: 'Python', color: 'text-blue-500' },
   { icon: 'devicon-django-plain', name: 'Django', color: 'text-green-700' },
+
+  // 🔹 Databases & Caching
   { icon: 'devicon-mongodb-plain', name: 'MongoDB', color: 'text-green-600' },
   { icon: 'devicon-postgresql-plain', name: 'PostgreSQL', color: 'text-blue-700' },
+  { icon: 'devicon-redis-plain-wordmark', name: 'Redis', color: 'text-red-600' },
+
+  // 🔹 Dev Tools & Package Managers
   { icon: 'devicon-git-plain', name: 'Git', color: 'text-red-600' },
   { icon: 'devicon-github-original', name: 'GitHub', color: 'text-gray-800' },
-  { icon: 'devicon-docker-plain', name: 'Docker', color: 'text-blue-500' },
-  { icon: 'devicon-amazonwebservices-plain', name: 'AWS', color: 'text-orange-500' },
-  { icon: 'devicon-python-plain', name: 'Python', color: 'text-blue-500' },
-  { icon: 'devicon-bootstrap-plain', name: 'Bootstrap', color: 'text-purple-600' },
   { icon: 'devicon-npm-original-wordmark', name: 'NPM', color: 'text-red-600' },
+  { icon: 'devicon-docker-plain', name: 'Docker', color: 'text-blue-500' },
+
+  // 🔹 Cloud / Infrastructure
+  { icon: 'devicon-amazonwebservices-plain', name: 'AWS', color: 'text-orange-500' },
 ];
 
   return (
